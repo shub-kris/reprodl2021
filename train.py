@@ -1,3 +1,4 @@
+import omegaconf
 import torch, torchaudio
 from torch import nn
 from torch.nn import functional as F
@@ -10,7 +11,12 @@ import pandas as pd
 
 import hydra
 from hydra.utils import get_original_cwd
-from omegaconf import DictConfig
+from omegaconf import DictConfig, OmegaConf
+
+import logging
+logger = logging.getLogger(__name__)
+
+import wandb
 
 
 class ESC50Dataset(torch.utils.data.Dataset):
@@ -113,6 +119,25 @@ class AudioNet(pl.LightningModule):
 
 @hydra.main(config_path='configs', config_name='default')
 def train(cfg: DictConfig):
+
+    # Initialize the W&B agent using the default values from cfg
+    config = {
+        'sample_rate': cfg.data.sample_rate,
+        'lr': cfg.model.optimizer.lr,
+        'base_filters': cfg.model.base_filters
+    }
+    wandb.init(project="reprodl2021", config=config)
+
+    # Get the (possibly updated) values from wandb
+    cfg.data.sample_rate = wandb.config.sample_rate
+    cfg.model.optimizer.lr = wandb.config.lr
+    cfg.model.base_filters = wandb.config.base_filters
+
+    # Simple logging of the configuration
+    logger.info(OmegaConf.to_yaml(cfg))
+
+
+    #Loading data
     path = Path(get_original_cwd()) / Path(cfg.data.path)
     train_data = ESC50Dataset(path=path, folds=cfg.data.train_folds)
     val_data = ESC50Dataset(path=path, folds=cfg.data.val_folds)
@@ -120,10 +145,15 @@ def train(cfg: DictConfig):
     train_loader = torch.utils.data.DataLoader(train_data, batch_size=cfg.data.batch_size, shuffle=True)
     val_loader = torch.utils.data.DataLoader(val_data, batch_size=cfg.data.batch_size)
     test_loader = torch.utils.data.DataLoader(test_data, batch_size=cfg.data.batch_size)
+
     pl.seed_everything(cfg.seed)
 
+    #Initializing Weight and Biases Logger
+    wandb_logger = pl.loggers.WandbLogger()
+
+    #Initialising trainer and training model
     audionet = AudioNet(cfg.model)
-    trainer = pl.Trainer(**cfg.trainer)
+    trainer = pl.Trainer(**cfg.trainer, logger=wandb_logger)
     trainer.fit(audionet, train_loader, val_loader)
     trainer.test(audionet, test_loader)
 
