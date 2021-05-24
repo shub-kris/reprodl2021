@@ -1,101 +1,119 @@
 # Reproducible Deep Learning
-## PhD Course in Data Science, 2021, 3 CFU
-[[Official website](https://www.sscardapane.it/teaching/reproducibledl/)]
+## Exercise 4: Dockerization
+[[Official website](https://www.sscardapane.it/teaching/reproducibledl/)] [[Slides](https://docs.google.com/presentation/d/1r7SbbajL-UnYHOeY9fQ9YtoJdu9Q70U5M_11E68K1Rg/edit?usp=sharing)] [[Docker Website](http://dvc.org/)]
 
-This practical PhD course explores the design of a simple *reproducible* environment for a deep learning project, using free, open-source tools ([Git](https://git-scm.com/), [DVC](http://dvc.org/), [Docker](https://www.docker.com/), [Hydra](https://github.com/facebookresearch/hydra), ...). The choice of tools is opinionated, and was made as a trade-off between practicality and didactical concerns.
+## Objectives for the exercise
 
-## Local set-up
+- [x] Pulling images and running containers.
+- [x] Building custom images from Dockerfiles.
+- [x] Pushing/pulling images from the Docker Hub.
 
-The use case of the course is an audio classification model trained on the [ESC-50](https://github.com/karolpiczak/ESC-50) dataset. To set-up your local machine (or a proper virtual / remote environment), configure [Anaconda](https://www.anaconda.com/products/individual), and create a clean environment:
 
-```bash
-conda create -n reprodl; conda activate reprodl
-```
+## Prerequisites
 
-> ⚠️ For an alternative setup without Anaconda, see [issue #2](https://github.com/sscardapane/reprodl2021/issues/2).
+1. Complete [Exercise 3](https://github.com/sscardapane/reprodl2021/tree/exercise3_dvc). Leave the MinIO server in execution.
+2. Install [Docker Desktop](https://docs.docker.com/get-docker/). For using a CUDA-enabled GPU, install the [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-docker).
+3. If you are using Visual Studio Code, install the [Docker extension](https://code.visualstudio.com/docs/containers/overview).
 
-Then, install a few generic prerequisites (notebook handling, Pandas, …):
-
-```bash
-conda install -y -c conda-forge notebook matplotlib pandas ipywidgets pathlib
-```
-
-Finally, install [PyTorch](https://pytorch.org/) and [PyTorch Lightning](https://github.com/PyTorchLightning/pytorch-lightning). The instructions below can vary depending on whether you have a CUDA-enabled machine, Linux, etc. In general, follow the instructions from the websites.
+Before starting, check that Docker is installed correctly:
 
 ```bash
-conda install -y pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch -c conda-forge
-conda install -y pytorch-lightning -c conda-forge
+docker run hello-world
 ```
 
-This should be enough to let you run the [initial notebook](https://github.com/sscardapane/reprodl2021/blob/main/Initial%20Notebook.ipynb). More information on the use case can be found inside the notebook itself.
+## Preliminaries
 
-> :warning: For Windows only, install a [backend for torchaudio](https://pytorch.org/audio/stable/backend.html):
-> ```bash
-> pip install soundfile
-> ```
+[Requirement specifiers](https://pip.pypa.io/en/stable/cli/pip_install/#requirement-specifiers) are very useful text files detailing all the Python libraries needed for a project. Let us create one!
 
-### Additional set-up steps
-
-The following steps are not mandatory, but will considerably simplify the experience.
-
-1. If you are on Windows, install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). This is useful in a number of contexts, including Docker installation.
-2. We will use Git from the command line multiple times, so consider enabling [GitHub access with an SSH key](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
-3. We will experiment with Docker reproducibility on the [Sapienza DGX environment](https://www.uniroma1.it/sites/default/files/field_file_allegati/presentazione_ga_13-05-2019_sgiagu.pdf). If you have not done so already, set-up your access to the machine.
-
-## Organization of the course
-
-<p align="center">
-<img align="center" src="https://github.com/sscardapane/reprodl2021/blob/main/reprodl_overview.png" width="500" style="border: 1px solid black;">
-</p>
-
-The course is split into **exercises** (e.g., adding DVC support). The material for each exercise is provided as a Git branch. To follow an exercise, switch to the corresponding branch, and follow the README there. If you want to see the completed exercise, add *_completed* to the name of the branch. Additional material and information can be found on the [main website](https://www.sscardapane.it/teaching/reproducibledl/) of the course.
-
-**List of exercises**:
-
-- [x] Experimenting with Git, branches, and scripting (*exercise1_git*).
-- [x] Adding Hydra configuration (*exercise2_hydra*).
-- [x] Versioning data with DVC (*exercise3_dvc*).
-- [x] Creating a Dockerfile (*exercise4_docker*).
-- [x] Experiment management with Weight & Biases (*exercise5_wandb*). 
-- [x] Unit testing and formatting with continuous integration (*exercise6_hooks*).
-
-### An example
-
-If you want to follow the first exercise, switch to the corresponding branch and follow the instructions from there:
+1. Install `pipreqs`:
 
 ```bash
-git checkout exercise1_git
+pip install pipreqs
 ```
 
-If you want to see the completed exercise:
+2. Generate a requirements.txt file from the current directory:
 
 ```bash
-git checkout exercise1_git_completed
+pipreqs .
 ```
+3. While powerful, `pipreqs` is not perfect, which is why you should look carefully at the generated file. In particular, at the moment [it sets the wrong dependencies for Hydra](https://github.com/bndr/pipreqs/issues/244). __Remove `hydra` from requirements.txt__ (the correct package is `hydra-core`).
 
-You can inspect the commits to look at specific changes in the code:
+### Install a Docker dashboard
+
+It is a good idea to have a decent dashboard to more easily manipulate images and containers. On some systems, you can use the [Docker Dashboard](https://docs.docker.com/desktop/dashboard/). Alternatively, you can use the VS Code plugin.
+
+For a more powerful alternative, you can start a [Portainer CE](https://documentation.portainer.io/quickstart/) container, which is a good exercise in understanding Docker:
 
 ```bash
-git log --graph --abbrev-commit --decorate
+docker volume create portainer_data
+docker run -d -p 9001:9000 --name=portainer -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 ```
 
-If you want to inspect a specific change, you can checkout again using the ID of the commit.
+> :speech_balloon: We are using port 9001 to avoid conflicts with MinIO on port 9000.
 
-### Contributing
+From [localhost:9001](http://localhost:9001) you can now monitor your Docker installation (see the [initial setup](https://documentation.portainer.io/v2.0/deploy/initial/)).
 
-Thanks to [Jeroen Van Goey](https://github.com/BioGeek) for the error hunting. Feel free to open a pull request if you have suggestions on the current material or ideas for some extra exercises (see below). 
+## Dockerfile \#1: developing in a container
 
-> ⚠️ Because of the sequential nature of the repository, changing something in one of the initial branches might trigger necessary changes in all downstream branches.
+Our first Dockerfile will be a working environment inside which to develop (and launch) the application. See the [slides](https://docs.google.com/presentation/d/1r7SbbajL-UnYHOeY9fQ9YtoJdu9Q70U5M_11E68K1Rg/edit?usp=sharing) for a tutorial on building Dockerfiles.
 
-### Extra material (students & more)
+The first Dockerfile `Dockerfile` should:
 
-**Extra** branches contain material that was not covered in the course (e.g., new libraries for hyper-parameter optimization), implemented by the students for the exam. They can be read independently from the main branches. Refer to the original authors for more information.
+1. Inherit from the official images of [PyTorch](https://hub.docker.com/r/pytorch/pytorch) or [PyTorch Lightning](https://hub.docker.com/r/pytorchlightning/pytorch_lightning).
+2. Install all the required libraries from the requirements file.
+3. Install [libsdnfile](https://packages.debian.org/sid/libsndfile1).
 
-| Author | Branch | Content |
-| ------------- | ------------- |------------- |
-| [OfficiallyDAC](https://github.com/OfficiallyDAC) | [extra_optuna](https://github.com/sscardapane/reprodl2021/tree/extra_optuna) | Fine-tuning hyper-parameters with [Optuna](https://optuna.readthedocs.io/en/latest/installation.html). |
-| [FraLuca](https://github.com/FraLuca) | [extra_torchserve](https://github.com/sscardapane/reprodl2021/tree/extra_torchserve) | Serving models with [TorchServe](https://pytorch.org/serve/) |
+Once the Dockerfile is completed, build the image:
 
-### Advanced reading material
+```bash
+docker build . --rm -t reprodl/env
+```
 
-If you liked the exercises and are planning to explore more, the new edition of [Full Stack Deep Learning](https://fullstackdeeplearning.com/) (UC Berkeley CS194-080) covers a larger set of material than this course. Another good resource (divided in small exercises) is the [MLOps](https://github.com/GokuMohandas/mlops) repository by Goku Mohandas. [lucmos/nn-template](https://github.com/lucmos/nn-template) is a fully-functioning template implementing many of the tools described in this course.
+Run the environment in interactive mode:
+
+```bash
+docker run -d -it -p 9002:9000 reprodl/env
+```
+> :speech_balloon: Adding a volume is also a good idea at this point. You can avoid mapping the port if you do not plan to use MinIO.
+
+Find the container ID running `docker ps`, and try attaching to the container running `docker attach <id>`. Alternatively, you can [attach to a running container](https://code.visualstudio.com/docs/remote/attach-container) from Visual Studio Code.
+
+From inside the container, try to replicate a training run.
+
+## Dockerfile \#2: an executable container
+
+Read about [multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/). Add a second stage to the Dockerfile that automatically copies all the required data and launches a training run.
+
+1. You can use the [COPY command](https://docs.docker.com/engine/reference/builder/#copy) to copy .py and .yaml files.
+2. Pass the MinIO keys using the [ARG command](https://docs.docker.com/engine/reference/builder/#arg).
+3. Launch `dvc pull` during the build.
+4. Launch the final training command at the end of the Dockerfile with the [CMD command](https://docs.docker.com/engine/reference/builder/#cmd).
+
+Build the new Dockerfile:
+
+```bash
+docker build . --rm --build-arg AWS_ACCESS_KEY_ID="minioadmin" --build-arg AWS_SECRET_ACCESS_KEY="minioadmin" -t reprodl/train
+```
+
+Launch another container:
+
+```bash
+docker run reprodl/train
+```
+
+
+## Push / pull from the Docker Hub
+
+You can also try [pushing and pulling](https://docs.docker.com/docker-hub/) your image using Docker Hub. First, tag your image accordingly:
+
+```bash
+docker tag reprodl/env <docker-username>/<project>
+```
+
+Then, push the image to the Docker Hub:
+
+```bash
+docker push <docker-username>/<project>
+```
+
+
