@@ -1,0 +1,354 @@
+2021-05-24 10:24:39,049 INFO    MainThread:20068 [internal.py:wandb_internal():88] W&B internal server running at pid: 20068, started at: 2021-05-24 10:24:39.041579
+2021-05-24 10:24:39,051 INFO    WriterThread:20068 [datastore.py:open_for_write():77] open: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\run-2xzc0bzs.wandb
+2021-05-24 10:24:39,051 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: check_version
+2021-05-24 10:24:39,053 DEBUG   SenderThread:20068 [sender.py:send():176] send: header
+2021-05-24 10:24:39,053 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: check_version
+2021-05-24 10:24:39,137 DEBUG   SenderThread:20068 [sender.py:send():176] send: run
+2021-05-24 10:24:39,505 INFO    SenderThread:20068 [dir_watcher.py:__init__():168] watching files in: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files
+2021-05-24 10:24:39,505 INFO    SenderThread:20068 [sender.py:_start_run_threads():696] run started: 2xzc0bzs with start time 1621844677
+2021-05-24 10:24:39,505 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:24:39,506 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: run_start
+2021-05-24 10:24:39,506 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:24:39,521 DEBUG   HandlerThread:20068 [meta.py:__init__():39] meta init
+2021-05-24 10:24:39,521 DEBUG   HandlerThread:20068 [meta.py:__init__():53] meta init done
+2021-05-24 10:24:39,521 DEBUG   HandlerThread:20068 [meta.py:probe():210] probe
+2021-05-24 10:24:39,537 DEBUG   HandlerThread:20068 [meta.py:_setup_git():200] setup git
+2021-05-24 10:24:39,641 DEBUG   HandlerThread:20068 [meta.py:_setup_git():207] setup git done
+2021-05-24 10:24:39,641 DEBUG   HandlerThread:20068 [meta.py:_save_pip():57] save pip
+2021-05-24 10:24:39,642 DEBUG   HandlerThread:20068 [meta.py:_save_pip():71] save pip done
+2021-05-24 10:24:39,642 DEBUG   HandlerThread:20068 [meta.py:_save_conda():78] save conda
+2021-05-24 10:24:40,513 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_created():216] file/dir created: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\requirements.txt
+2021-05-24 10:24:40,514 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_created():216] file/dir created: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\conda-environment.yaml
+2021-05-24 10:24:40,514 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_created():216] file/dir created: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:24:43,841 DEBUG   HandlerThread:20068 [meta.py:_save_conda():86] save conda done
+2021-05-24 10:24:43,841 DEBUG   HandlerThread:20068 [meta.py:probe():252] probe done
+2021-05-24 10:24:44,199 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-24 10:24:44,199 DEBUG   SenderThread:20068 [sender.py:send():176] send: files
+2021-05-24 10:24:44,199 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-metadata.json with policy now
+2021-05-24 10:24:44,200 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: stop_status
+2021-05-24 10:24:44,544 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\conda-environment.yaml
+2021-05-24 10:24:44,545 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_created():216] file/dir created: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\output.log
+2021-05-24 10:24:44,545 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_created():216] file/dir created: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-metadata.json
+2021-05-24 10:24:44,772 INFO    Thread-19 :20068 [upload_job.py:push():133] Uploaded file C:\Users\Maverick\AppData\Local\Temp\tmp3l16582rwandb\2mw7ly2g-wandb-metadata.json
+2021-05-24 10:24:45,743 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:24:45,743 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:24:45,743 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:24:45,743 DEBUG   SenderThread:20068 [sender.py:send():176] send: config
+2021-05-24 10:24:46,556 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_created():216] file/dir created: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021
+2021-05-24 10:24:46,556 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_created():216] file/dir created: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021\2xzc0bzs\checkpoints
+2021-05-24 10:24:46,556 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_created():216] file/dir created: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021\2xzc0bzs
+2021-05-24 10:24:47,559 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:24:53,458 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:24:53,459 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:24:53,459 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:24:53,460 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:24:53,461 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:24:53,461 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:24:53,461 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:24:53,462 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:24:53,589 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:24:54,605 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:24:59,381 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-24 10:24:59,382 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: stop_status
+2021-05-24 10:25:00,801 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:00,802 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:00,802 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:25:00,804 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:25:00,804 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:25:00,805 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:25:01,673 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:25:02,682 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:25:06,509 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:06,510 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:06,510 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:25:06,512 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:25:06,512 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:25:06,513 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:25:06,707 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:25:08,718 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:25:10,839 DEBUG   SenderThread:20068 [sender.py:send():176] send: stats
+2021-05-24 10:25:12,923 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:13,135 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:13,136 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:25:13,136 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:13,136 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:25:13,136 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:25:13,137 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:25:13,797 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:25:13,798 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:25:13,798 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_created():216] file/dir created: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021\2xzc0bzs\checkpoints\epoch=0-step=149.ckpt
+2021-05-24 10:25:13,799 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021\2xzc0bzs\checkpoints
+2021-05-24 10:25:14,573 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-24 10:25:14,573 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: stop_status
+2021-05-24 10:25:15,816 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:25:20,035 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:20,036 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:20,036 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:25:20,038 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:25:20,039 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:25:20,040 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:25:20,854 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:25:20,854 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:25:26,530 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:26,530 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:26,531 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:25:26,533 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:25:26,533 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:25:26,534 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:25:26,910 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:25:27,912 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:25:29,761 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-24 10:25:29,762 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: stop_status
+2021-05-24 10:25:32,259 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:32,260 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:32,260 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:25:32,261 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:25:32,262 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:25:32,262 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:25:32,955 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:25:32,955 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:25:37,920 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:37,921 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:37,923 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:25:37,924 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:25:37,924 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:25:37,925 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:25:37,993 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:25:37,994 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_created():216] file/dir created: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021\2xzc0bzs\checkpoints\epoch=1-step=299.ckpt
+2021-05-24 10:25:37,994 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021\2xzc0bzs\checkpoints
+2021-05-24 10:25:40,016 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:25:44,350 DEBUG   SenderThread:20068 [sender.py:send():176] send: stats
+2021-05-24 10:25:44,926 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:44,926 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:44,927 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:25:44,928 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:25:44,928 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:25:44,929 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:25:44,952 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-24 10:25:44,952 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: stop_status
+2021-05-24 10:25:45,062 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:25:46,068 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:25:50,865 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:50,866 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:50,867 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:25:50,869 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:25:50,869 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:25:50,870 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:25:51,099 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:25:52,104 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:25:56,736 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:56,737 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:25:56,737 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:25:56,739 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:25:56,739 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:25:56,740 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:25:57,149 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:25:58,163 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:26:00,176 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-24 10:26:00,177 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: stop_status
+2021-05-24 10:26:02,306 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:02,307 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:02,307 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:26:02,308 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:26:02,308 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:26:02,309 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:26:03,215 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:26:03,216 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_created():216] file/dir created: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021\2xzc0bzs\checkpoints\epoch=2-step=449.ckpt
+2021-05-24 10:26:03,217 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021\2xzc0bzs\checkpoints
+2021-05-24 10:26:04,225 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:26:08,523 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:08,524 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:08,524 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:26:08,525 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:26:08,526 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:26:08,527 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:26:09,265 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:26:10,266 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:26:14,296 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:14,297 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:14,297 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:26:14,299 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:26:14,299 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:26:14,300 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:26:14,307 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:26:15,361 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-24 10:26:15,499 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: stop_status
+2021-05-24 10:26:16,335 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:26:18,040 DEBUG   SenderThread:20068 [sender.py:send():176] send: stats
+2021-05-24 10:26:20,080 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:20,081 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:20,081 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:26:20,083 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:26:20,083 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:26:20,084 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:26:20,374 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:26:22,398 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:26:25,664 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:25,665 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:25,665 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:26:25,667 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:26:25,668 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:26:25,668 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:26:26,441 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:26:26,442 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:26:26,442 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_created():216] file/dir created: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021\2xzc0bzs\checkpoints\epoch=3-step=599.ckpt
+2021-05-24 10:26:26,443 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021\2xzc0bzs\checkpoints
+2021-05-24 10:26:30,682 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-24 10:26:30,683 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: stop_status
+2021-05-24 10:26:32,096 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:32,097 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:32,097 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:26:32,099 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:26:32,099 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:26:32,099 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:26:32,504 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:26:34,512 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:26:37,902 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:37,903 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:37,903 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:26:37,904 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:26:37,905 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:26:37,906 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:26:38,533 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:26:39,545 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:26:43,622 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:43,810 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:43,810 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:26:43,810 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:26:43,810 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:26:43,811 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:26:44,579 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:26:44,579 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:26:45,858 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-24 10:26:45,859 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: stop_status
+2021-05-24 10:26:49,124 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:49,125 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:49,125 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:26:49,126 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:26:49,127 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:26:49,128 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:26:49,166 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:49,166 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:49,166 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:26:49,166 DEBUG   SenderThread:20068 [sender.py:send():176] send: config
+2021-05-24 10:26:49,616 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:26:49,617 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_created():216] file/dir created: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021\2xzc0bzs\checkpoints\epoch=4-step=749.ckpt
+2021-05-24 10:26:49,617 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021\2xzc0bzs\checkpoints
+2021-05-24 10:26:50,628 INFO    Thread-14 :20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:26:51,710 DEBUG   SenderThread:20068 [sender.py:send():176] send: stats
+2021-05-24 10:26:54,816 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:54,817 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:54,817 WARNING SenderThread:20068 [sender.py:send_metric():779] Seen metric with glob (shouldnt happen)
+2021-05-24 10:26:54,819 DEBUG   SenderThread:20068 [sender.py:send():176] send: metric
+2021-05-24 10:26:54,820 DEBUG   SenderThread:20068 [sender.py:send():176] send: history
+2021-05-24 10:26:54,820 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:26:54,820 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:26:54,836 DEBUG   SenderThread:20068 [sender.py:send():176] send: telemetry
+2021-05-24 10:26:54,836 DEBUG   SenderThread:20068 [sender.py:send():176] send: exit
+2021-05-24 10:26:54,836 INFO    SenderThread:20068 [sender.py:send_exit():281] handling exit code: 0
+2021-05-24 10:26:54,836 INFO    SenderThread:20068 [sender.py:send_exit():289] send defer
+2021-05-24 10:26:54,837 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-24 10:26:54,837 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: poll_exit
+2021-05-24 10:26:54,838 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: defer
+2021-05-24 10:26:54,838 INFO    HandlerThread:20068 [handler.py:handle_request_defer():138] handle defer: 0
+2021-05-24 10:26:54,838 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: defer
+2021-05-24 10:26:54,838 INFO    SenderThread:20068 [sender.py:send_request_defer():298] handle sender defer: 0
+2021-05-24 10:26:54,838 INFO    SenderThread:20068 [sender.py:send_request_defer():336] send defer: 1
+2021-05-24 10:26:54,838 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: defer
+2021-05-24 10:26:54,838 INFO    HandlerThread:20068 [handler.py:handle_request_defer():138] handle defer: 1
+2021-05-24 10:26:54,889 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: defer
+2021-05-24 10:26:54,889 INFO    SenderThread:20068 [sender.py:send_request_defer():298] handle sender defer: 1
+2021-05-24 10:26:54,890 INFO    SenderThread:20068 [sender.py:send_request_defer():336] send defer: 2
+2021-05-24 10:26:54,891 DEBUG   SenderThread:20068 [sender.py:send():176] send: stats
+2021-05-24 10:26:54,891 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: defer
+2021-05-24 10:26:54,892 INFO    HandlerThread:20068 [handler.py:handle_request_defer():138] handle defer: 2
+2021-05-24 10:26:54,892 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: defer
+2021-05-24 10:26:54,892 INFO    SenderThread:20068 [sender.py:send_request_defer():298] handle sender defer: 2
+2021-05-24 10:26:54,892 INFO    SenderThread:20068 [sender.py:send_request_defer():336] send defer: 3
+2021-05-24 10:26:54,893 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: defer
+2021-05-24 10:26:54,893 INFO    HandlerThread:20068 [handler.py:handle_request_defer():138] handle defer: 3
+2021-05-24 10:26:54,893 DEBUG   SenderThread:20068 [sender.py:send():176] send: summary
+2021-05-24 10:26:54,894 INFO    SenderThread:20068 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-24 10:26:54,894 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: defer
+2021-05-24 10:26:54,894 INFO    SenderThread:20068 [sender.py:send_request_defer():298] handle sender defer: 3
+2021-05-24 10:26:54,895 INFO    SenderThread:20068 [sender.py:send_request_defer():336] send defer: 4
+2021-05-24 10:26:54,895 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: defer
+2021-05-24 10:26:54,895 INFO    HandlerThread:20068 [handler.py:handle_request_defer():138] handle defer: 4
+2021-05-24 10:26:54,895 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: defer
+2021-05-24 10:26:54,895 INFO    SenderThread:20068 [sender.py:send_request_defer():298] handle sender defer: 4
+2021-05-24 10:26:54,942 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-24 10:26:55,134 INFO    SenderThread:20068 [sender.py:send_request_defer():336] send defer: 5
+2021-05-24 10:26:55,135 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: poll_exit
+2021-05-24 10:26:55,138 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: defer
+2021-05-24 10:26:55,138 INFO    HandlerThread:20068 [handler.py:handle_request_defer():138] handle defer: 5
+2021-05-24 10:26:55,139 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: defer
+2021-05-24 10:26:55,140 INFO    SenderThread:20068 [sender.py:send_request_defer():298] handle sender defer: 5
+2021-05-24 10:26:55,140 INFO    SenderThread:20068 [dir_watcher.py:finish():282] shutting down directory watcher
+2021-05-24 10:26:55,244 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-24 10:26:55,667 INFO    SenderThread:20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\output.log
+2021-05-24 10:26:55,669 INFO    SenderThread:20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:26:55,669 INFO    SenderThread:20068 [dir_watcher.py:_on_file_modified():229] file/dir modified: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:26:55,671 INFO    SenderThread:20068 [dir_watcher.py:finish():312] scan: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files
+2021-05-24 10:26:55,671 INFO    SenderThread:20068 [dir_watcher.py:finish():318] scan save: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\conda-environment.yaml conda-environment.yaml
+2021-05-24 10:26:55,672 INFO    SenderThread:20068 [dir_watcher.py:finish():318] scan save: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml config.yaml
+2021-05-24 10:26:55,674 INFO    SenderThread:20068 [dir_watcher.py:finish():318] scan save: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\output.log output.log
+2021-05-24 10:26:55,687 INFO    SenderThread:20068 [dir_watcher.py:finish():318] scan save: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\requirements.txt requirements.txt
+2021-05-24 10:26:55,700 INFO    SenderThread:20068 [dir_watcher.py:finish():318] scan save: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-metadata.json wandb-metadata.json
+2021-05-24 10:26:55,701 INFO    SenderThread:20068 [dir_watcher.py:finish():318] scan save: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json wandb-summary.json
+2021-05-24 10:26:55,723 INFO    SenderThread:20068 [dir_watcher.py:finish():318] scan save: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021\2xzc0bzs\checkpoints\epoch=4-step=749.ckpt reprodl2021\2xzc0bzs\checkpoints\epoch=4-step=749.ckpt
+2021-05-24 10:26:55,723 INFO    SenderThread:20068 [sender.py:send_request_defer():336] send defer: 6
+2021-05-24 10:26:55,723 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: poll_exit
+2021-05-24 10:26:55,725 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: defer
+2021-05-24 10:26:55,725 INFO    HandlerThread:20068 [handler.py:handle_request_defer():138] handle defer: 6
+2021-05-24 10:26:55,725 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: defer
+2021-05-24 10:26:55,726 INFO    SenderThread:20068 [sender.py:send_request_defer():298] handle sender defer: 6
+2021-05-24 10:26:55,726 INFO    SenderThread:20068 [file_pusher.py:finish():176] shutting down file pusher
+2021-05-24 10:26:55,726 INFO    SenderThread:20068 [sender.py:send_request_defer():336] send defer: 7
+2021-05-24 10:26:55,730 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: defer
+2021-05-24 10:26:55,730 INFO    HandlerThread:20068 [handler.py:handle_request_defer():138] handle defer: 7
+2021-05-24 10:26:55,731 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: defer
+2021-05-24 10:26:55,731 INFO    SenderThread:20068 [sender.py:send_request_defer():298] handle sender defer: 7
+2021-05-24 10:26:55,834 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-24 10:26:56,053 INFO    SenderThread:20068 [sender.py:send_request_defer():336] send defer: 8
+2021-05-24 10:26:56,054 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: poll_exit
+2021-05-24 10:26:56,055 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: defer
+2021-05-24 10:26:56,055 INFO    HandlerThread:20068 [handler.py:handle_request_defer():138] handle defer: 8
+2021-05-24 10:26:56,055 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: defer
+2021-05-24 10:26:56,055 INFO    SenderThread:20068 [sender.py:send_request_defer():298] handle sender defer: 8
+2021-05-24 10:26:56,056 INFO    SenderThread:20068 [sender.py:send_request_defer():336] send defer: 9
+2021-05-24 10:26:56,056 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: defer
+2021-05-24 10:26:56,057 INFO    HandlerThread:20068 [handler.py:handle_request_defer():138] handle defer: 9
+2021-05-24 10:26:56,057 DEBUG   SenderThread:20068 [sender.py:send():176] send: final
+2021-05-24 10:26:56,057 DEBUG   SenderThread:20068 [sender.py:send():176] send: footer
+2021-05-24 10:26:56,057 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: defer
+2021-05-24 10:26:56,057 INFO    SenderThread:20068 [sender.py:send_request_defer():298] handle sender defer: 9
+2021-05-24 10:26:56,161 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-24 10:26:56,162 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: poll_exit
+2021-05-24 10:26:56,271 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-24 10:26:56,271 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: poll_exit
+2021-05-24 10:26:56,278 INFO    Thread-20 :20068 [upload_job.py:push():133] Uploaded file D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\conda-environment.yaml
+2021-05-24 10:26:56,284 INFO    Thread-21 :20068 [upload_job.py:push():133] Uploaded file D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\config.yaml
+2021-05-24 10:26:56,286 INFO    Thread-23 :20068 [upload_job.py:push():133] Uploaded file D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\requirements.txt
+2021-05-24 10:26:56,296 INFO    Thread-22 :20068 [upload_job.py:push():133] Uploaded file D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\output.log
+2021-05-24 10:26:56,299 INFO    Thread-24 :20068 [upload_job.py:push():133] Uploaded file D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\wandb-summary.json
+2021-05-24 10:26:56,379 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-24 10:26:56,379 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: poll_exit
+2021-05-24 10:26:56,489 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-24 10:26:56,489 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: poll_exit
+2021-05-24 10:26:56,542 INFO    Thread-25 :20068 [upload_job.py:push():133] Uploaded file D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\files\reprodl2021\2xzc0bzs\checkpoints\epoch=4-step=749.ckpt
+2021-05-24 10:26:56,598 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-24 10:26:56,598 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: poll_exit
+2021-05-24 10:26:56,707 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-24 10:26:56,708 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: poll_exit
+2021-05-24 10:26:56,816 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-24 10:26:56,817 DEBUG   SenderThread:20068 [sender.py:send_request():186] send_request: poll_exit
+2021-05-24 10:26:56,817 INFO    SenderThread:20068 [file_pusher.py:join():181] waiting for file pusher
+2021-05-24 10:26:56,826 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: get_summary
+2021-05-24 10:26:56,830 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: sampled_history
+2021-05-24 10:26:56,835 DEBUG   HandlerThread:20068 [handler.py:handle_request():121] handle_request: shutdown
+2021-05-24 10:26:56,836 INFO    HandlerThread:20068 [handler.py:finish():632] shutting down handler
+2021-05-24 10:26:57,063 INFO    WriterThread:20068 [datastore.py:close():258] close: D:\STUDY\Online Courses\Reproducible DL\myreprodl2021\reprodl2021\outputs\2021-05-24\10-24-36\wandb\run-20210524_102437-2xzc0bzs\run-2xzc0bzs.wandb
+2021-05-24 10:26:57,820 INFO    SenderThread:20068 [sender.py:finish():925] shutting down sender
+2021-05-24 10:26:57,820 INFO    SenderThread:20068 [file_pusher.py:finish():176] shutting down file pusher
+2021-05-24 10:26:57,821 INFO    SenderThread:20068 [file_pusher.py:join():181] waiting for file pusher
+2021-05-24 10:26:57,824 INFO    MainThread:20068 [internal.py:handle_exit():78] Internal process exited

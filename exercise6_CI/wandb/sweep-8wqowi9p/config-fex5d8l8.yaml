@@ -1,0 +1,10 @@
+wandb_version: 1
+
+base_filters:
+  value: 24
+lr:
+  value: 0.0191366604513228
+optimizer:
+  value: adam
+sample_rate:
+  value: 8000

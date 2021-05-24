@@ -1,0 +1,6 @@
+[core]
+    remote = gdriveremote
+['remote "localremote"']
+    url = D:/STUDY/Online Courses/Reproducible DL/Datasets
+['remote "gdriveremote"']
+    url = gdrive://1B9IJL1p-iFSzLzHFPON5gnahVFZ_Sw-5

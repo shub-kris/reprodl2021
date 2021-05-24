@@ -1,0 +1,22 @@
+[2021-05-24 10:24:36,839][__main__][INFO] - seed: 0
+data:
+  path: data/ESC-50
+  sample_rate: 8000
+  train_folds:
+  - 1
+  - 2
+  - 3
+  val_folds:
+  - 4
+  test_folds:
+  - 5
+  batch_size: 8
+model:
+  base_filters: 16
+  num_classes: 50
+  optim:
+    lr: 0.0003
+trainer:
+  gpus: 1
+  max_epochs: 5
+

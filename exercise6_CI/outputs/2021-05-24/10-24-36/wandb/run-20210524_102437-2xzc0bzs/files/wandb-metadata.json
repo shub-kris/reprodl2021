@@ -1,0 +1,27 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.9.4",
+    "heartbeatAt": "2021-05-24T08:24:39.521580",
+    "startedAt": "2021-05-24T08:24:37.580580",
+    "docker": null,
+    "gpu": "GeForce GTX 1070",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [
+        "trainer.max_epochs=5",
+        "model.base_filters=16"
+    ],
+    "state": "running",
+    "program": "D:\\STUDY\\Online Courses\\Reproducible DL\\myreprodl2021\\reprodl2021\\train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/shub-kris/reprodl2021",
+        "commit": "a9e36b3c9abaa25aed14af7bb6011967e190f712"
+    },
+    "email": "shubhamkrishna.ism@gmail.com",
+    "root": "D:/STUDY/Online Courses/Reproducible DL/myreprodl2021/reprodl2021",
+    "host": "DESKTOP-28DQEHI",
+    "username": "Maverick",
+    "executable": "C:\\Users\\Maverick\\Anaconda3\\envs\\reprodl\\python.exe"
+}
