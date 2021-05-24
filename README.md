@@ -1,101 +1,109 @@
 # Reproducible Deep Learning
-## PhD Course in Data Science, 2021, 3 CFU
+## Exercise 6: Continuous Integration
 [[Official website](https://www.sscardapane.it/teaching/reproducibledl/)]
 
-This practical PhD course explores the design of a simple *reproducible* environment for a deep learning project, using free, open-source tools ([Git](https://git-scm.com/), [DVC](http://dvc.org/), [Docker](https://www.docker.com/), [Hydra](https://github.com/facebookresearch/hydra), ...). The choice of tools is opinionated, and was made as a trade-off between practicality and didactical concerns.
+## Objectives for the exercise
 
-## Local set-up
+- [x] Unit testing the code.
+- [x] Automatic formatting with [Black](https://github.com/psf/black).
+- [x] Integrating checks in pre-commit hooks.
+- [x] Adding a GitHub Action to automate the process.
 
-The use case of the course is an audio classification model trained on the [ESC-50](https://github.com/karolpiczak/ESC-50) dataset. To set-up your local machine (or a proper virtual / remote environment), configure [Anaconda](https://www.anaconda.com/products/individual), and create a clean environment:
 
-```bash
-conda create -n reprodl; conda activate reprodl
+
+
+## Preliminary: testing and formatting
+
+The purpose of this exercise is to integrate two ways of checking the code correctness: **formatting** and **testing**. 
+
+### Step 1: Add a unit test
+
+To start, create a `test_audionet.py` file with at least one test function:
+
+```python
+def testAudioNet():
+  ...
+  assert # Test something about the model
 ```
 
-> ⚠️ For an alternative setup without Anaconda, see [issue #2](https://github.com/sscardapane/reprodl2021/issues/2).
+You can read the [Hydra documentation](https://hydra.cc/docs/next/advanced/unit_testing/) for information on how to load the configuration inside the unit test. If you need an idea for the unit test, PyTorch Lightning has a useful [overfit on batch](https://pytorch-lightning.readthedocs.io/en/latest/common/debugging.html#make-model-overfit-on-subset-of-data) function that provides a quick test for the correctness of the model. 
 
-Then, install a few generic prerequisites (notebook handling, Pandas, …):
-
-```bash
-conda install -y -c conda-forge notebook matplotlib pandas ipywidgets pathlib
-```
-
-Finally, install [PyTorch](https://pytorch.org/) and [PyTorch Lightning](https://github.com/PyTorchLightning/pytorch-lightning). The instructions below can vary depending on whether you have a CUDA-enabled machine, Linux, etc. In general, follow the instructions from the websites.
+Launch the unit test:
 
 ```bash
-conda install -y pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch -c conda-forge
-conda install -y pytorch-lightning -c conda-forge
+nosetests
 ```
 
-This should be enough to let you run the [initial notebook](https://github.com/sscardapane/reprodl2021/blob/main/Initial%20Notebook.ipynb). More information on the use case can be found inside the notebook itself.
+### Step 2 - Add formatting
 
-> :warning: For Windows only, install a [backend for torchaudio](https://pytorch.org/audio/stable/backend.html):
-> ```bash
-> pip install soundfile
-> ```
+[Black](https://github.com/psf/black) provides a powerful way to automatically format any code according to well-defined style guides.
 
-### Additional set-up steps
-
-The following steps are not mandatory, but will considerably simplify the experience.
-
-1. If you are on Windows, install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). This is useful in a number of contexts, including Docker installation.
-2. We will use Git from the command line multiple times, so consider enabling [GitHub access with an SSH key](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
-3. We will experiment with Docker reproducibility on the [Sapienza DGX environment](https://www.uniroma1.it/sites/default/files/field_file_allegati/presentazione_ga_13-05-2019_sgiagu.pdf). If you have not done so already, set-up your access to the machine.
-
-## Organization of the course
-
-<p align="center">
-<img align="center" src="https://github.com/sscardapane/reprodl2021/blob/main/reprodl_overview.png" width="500" style="border: 1px solid black;">
-</p>
-
-The course is split into **exercises** (e.g., adding DVC support). The material for each exercise is provided as a Git branch. To follow an exercise, switch to the corresponding branch, and follow the README there. If you want to see the completed exercise, add *_completed* to the name of the branch. Additional material and information can be found on the [main website](https://www.sscardapane.it/teaching/reproducibledl/) of the course.
-
-**List of exercises**:
-
-- [x] Experimenting with Git, branches, and scripting (*exercise1_git*).
-- [x] Adding Hydra configuration (*exercise2_hydra*).
-- [x] Versioning data with DVC (*exercise3_dvc*).
-- [x] Creating a Dockerfile (*exercise4_docker*).
-- [x] Experiment management with Weight & Biases (*exercise5_wandb*). 
-- [x] Unit testing and formatting with continuous integration (*exercise6_hooks*).
-
-### An example
-
-If you want to follow the first exercise, switch to the corresponding branch and follow the instructions from there:
+First, check the adherence of your code to the Black style:
 
 ```bash
-git checkout exercise1_git
+black --diff --check train.py test_audionet.py
 ```
 
-If you want to see the completed exercise:
+Then, try to apply the changes:
 
 ```bash
-git checkout exercise1_git_completed
+black train.py test_audionet.py
 ```
 
-You can inspect the commits to look at specific changes in the code:
+> :speech_balloon: Black is an **opinionated** formatting tool. If you do not like the resulting formatting, feel free to skip this step.
+
+## Add a Git hook
+
+Our challenge now is to ensure that testing and formatting are applied to every commit we make. A simple way to ensure this is to add a [pre-commit Git hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks).
+
+> :speech_balloon: Because this is a didactic exercise, we implement the hook from scratch. For a realistic use case, consider [pre-commit](https://pre-commit.com/).
+
+First, write a `pre-commit` script that launches our two testing routines. A small template is provided below:
 
 ```bash
-git log --graph --abbrev-commit --decorate
+#!/bin/sh
+
+# TODO: Launch the Black checker here
+...
+
+# If the command does not return 0 ('correct'), we exit the commit
+if [ $? -ne 0 ]; then
+	echo "Code is not formatted correctly!"
+	exit 1
+fi
+
+# TODO: Repeat a second time for the unit tests
 ```
 
-If you want to inspect a specific change, you can checkout again using the ID of the commit.
+Move the file to `.git/hooks/`, and try launching a commit with poorly formatted code (it should fail). Then, repeat after executing the Black formatter.
 
-### Contributing
+## Adding a GitHub Action
 
-Thanks to [Jeroen Van Goey](https://github.com/BioGeek) for the error hunting. Feel free to open a pull request if you have suggestions on the current material or ideas for some extra exercises (see below). 
+The Git hook does its job, but it is limited, especially because it runs locally. **Continuous integration** platforms (like CircleCI, Travis CI, ...) provide a way of integrating these checks when a user pushes the code to the remote repository.
 
-> ⚠️ Because of the sequential nature of the repository, changing something in one of the initial branches might trigger necessary changes in all downstream branches.
+For this exercise, we use GitHub Actions: read the [quickstart](https://docs.github.com/en/actions/quickstart) before proceeding.
 
-### Extra material (students & more)
+Create a `push-workflow.yml` file inside a `.github/workflows/` folder. The workflow shoud: (i) install all dependencies for our code; (ii) execute the unit tests; (iii) check adherence of the code to the Black style.
 
-**Extra** branches contain material that was not covered in the course (e.g., new libraries for hyper-parameter optimization), implemented by the students for the exam. They can be read independently from the main branches. Refer to the original authors for more information.
+An incomplete template is provided below:
 
-| Author | Branch | Content |
-| ------------- | ------------- |------------- |
-| [OfficiallyDAC](https://github.com/OfficiallyDAC) | [extra_optuna](https://github.com/sscardapane/reprodl2021/tree/extra_optuna) | Fine-tuning hyper-parameters with [Optuna](https://optuna.readthedocs.io/en/latest/installation.html). |
-| [FraLuca](https://github.com/FraLuca) | [extra_torchserve](https://github.com/sscardapane/reprodl2021/tree/extra_torchserve) | Serving models with [TorchServe](https://pytorch.org/serve/) |
+```yaml
+name: push-workflow
+on: [push]
+jobs:
+  build: # Build the environment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 # Checkout the repository
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          sudo apt-get install -y libsndfile1-dev
+      - name: Run all unit tests 
+        run: ... # TODO: Add code here to run the unitests
+      # TODO: Add another step to run Black
+```
 
-### Advanced reading material
+Push the new file to GitHub, then try committing additional code. You can visualize the running workflows from the Actions tab of the GitHub repository.
 
-If you liked the exercises and are planning to explore more, the new edition of [Full Stack Deep Learning](https://fullstackdeeplearning.com/) (UC Berkeley CS194-080) covers a larger set of material than this course. Another good resource (divided in small exercises) is the [MLOps](https://github.com/GokuMohandas/mlops) repository by Goku Mohandas. [lucmos/nn-template](https://github.com/lucmos/nn-template) is a fully-functioning template implementing many of the tools described in this course.
