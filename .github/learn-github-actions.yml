@@ -1,0 +1,9 @@
+name: check-formatting
+on: [push]
+jobs:
+  run-black: # Name of the job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 # Checkout the repository
+      - run: pip install black
+        run: black --diff --check train.py
